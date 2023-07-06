@@ -50,11 +50,11 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }} --force
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-      - name: Generate next.config.js
-        run: |
-          echo "module.exports = {" >> next.config.js
-          echo "  basePath: process.env.CONTEXT === 'production' ? '/public' : '/'," >> next.config.js
-          echo "};" >> next.config.js
+#      - name: Generate next.config.js
+#        run: |
+#          echo "module.exports = {" >> next.config.js
+#          echo "  basePath: process.env.CONTEXT === 'production' ? '/public' : '/'," >> next.config.js
+#          echo "};" >> next.config.js
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact

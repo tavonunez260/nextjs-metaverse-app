@@ -30,12 +30,7 @@ export function Footer() {
 						</p>
 						<div className="flex gap-4">
 							{socials.map(({ name, url }) => (
-								<img
-									key={name}
-									src={`/public${url}`}
-									alt={name}
-									className="w-[24px] h-[24px] object-contain cursor-pointer"
-								/>
+								<img key={name} src={url} alt={name} className="w-[24px] h-[24px] object-contain cursor-pointer" />
 							))}
 						</div>
 					</div>
