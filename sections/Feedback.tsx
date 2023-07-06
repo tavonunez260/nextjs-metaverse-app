@@ -4,6 +4,7 @@ import styles from '@/styles'
 import { fadeIn, staggerContainer, zoomIn } from '@/utils'
 
 import { motion } from 'framer-motion'
+import moduleExports from '@/next.config'
 
 export function Feedback() {
 	return (
@@ -38,12 +39,16 @@ export function Feedback() {
 					className="relative flex-1 flex justify-center items-center"
 				>
 					<img
-						src="/planet-09.png"
+						src={`${moduleExports.assetPrefix || ''}/planet-09.png`}
 						alt="planet"
 						className="w-full lg:h-[610px] h-auto min-h-[210px] object-cover rounded-[40px]"
 					/>
 					<motion.div variants={zoomIn(0.4, 1)} className="lg:block hidden absolute -left-[10%] top-[3%]">
-						<img src="/stamp.png" alt="stamp" className="w-[155px] h-[155px] object-contain" />
+						<img
+							src={`${moduleExports.assetPrefix || ''}/stamp.png`}
+							alt="stamp"
+							className="w-[155px] h-[155px] object-contain"
+						/>
 					</motion.div>
 				</motion.div>
 			</motion.div>

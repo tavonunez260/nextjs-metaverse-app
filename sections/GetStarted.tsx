@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { fadeIn, planetVariants, staggerContainer } from '@/utils'
 import { StartSteps, TitleText, TypingText } from '@/components'
 import { startingFeatures } from '@/constants'
+import moduleExports from '@/next.config'
 
 export function GetStarted() {
 	return (
@@ -18,7 +19,11 @@ export function GetStarted() {
 				className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8`}
 			>
 				<motion.div variants={planetVariants('left')} className={`${styles.flexCenter} flex-1`}>
-					<img src="/get-started.png" alt="get started" className="w-[90%] h-[90%] object-contain" />
+					<img
+						src={`${moduleExports.assetPrefix || ''}/get-started.png`}
+						alt="get started"
+						className="w-[90%] h-[90%] object-contain"
+					/>
 				</motion.div>
 				<motion.div variants={fadeIn('left', 'tween', 0.2, 1)} className="flex-[0.75] flex justify-center flex-col ">
 					<TypingText title="| How Metaversus Works" />

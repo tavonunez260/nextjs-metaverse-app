@@ -5,6 +5,7 @@ import styles from '@/styles'
 import { fadeIn, planetVariants, staggerContainer } from '@/utils'
 import { NewFeatures, TitleText, TypingText } from '@/components'
 import { newFeatures } from '@/constants'
+import moduleExports from '@/next.config'
 export function WhatsNew() {
 	return (
 		<section className={`${styles.paddings} relative z-10`}>
@@ -30,7 +31,11 @@ export function WhatsNew() {
 					</div>
 				</motion.div>
 				<motion.div variants={planetVariants('right')} className={`${styles.flexCenter} flex-1`}>
-					<img src="/whats-new.png" alt="whats new" className="w-[90%] h-[90%] object-contain" />
+					<img
+						src={`${moduleExports.assetPrefix || ''}/whats-new.png`}
+						alt="whats new"
+						className="w-[90%] h-[90%] object-contain"
+					/>
 				</motion.div>
 			</motion.div>
 		</section>

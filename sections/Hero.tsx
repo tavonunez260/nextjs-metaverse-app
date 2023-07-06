@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import styles from '@/styles'
 import { slideIn, staggerContainer, textVariant } from '@/utils'
 
+import moduleExports from '../next.config'
+
 export function Hero() {
 	return (
 		<section className={`${styles.yPaddings}`}>
@@ -32,14 +34,14 @@ export function Hero() {
 					>
 						<div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] -z-10 -top-[30px]" />
 						<img
-							src="/cover.png"
+							src={`${moduleExports.assetPrefix || ''}/cover.png`}
 							alt="cover"
 							className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px]"
 						/>
 						<a href="#explore">
 							<div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px]">
 								<img
-									src="/stamp.png"
+									src={`${moduleExports.assetPrefix || ''}/stamp.png`}
 									alt="stamp"
 									className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain"
 								/>
