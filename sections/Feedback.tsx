@@ -38,7 +38,7 @@ export function Feedback() {
 					className="relative flex-1 flex justify-center items-center"
 				>
 					<img
-						src="/planet-09.png"
+						src="/public/planet-09.png"
 						alt="planet"
 						className="w-full lg:h-[610px] h-auto min-h-[210px] object-cover rounded-[40px]"
 					/>

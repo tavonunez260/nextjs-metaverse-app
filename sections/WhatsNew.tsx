@@ -30,7 +30,7 @@ export function WhatsNew() {
 					</div>
 				</motion.div>
 				<motion.div variants={planetVariants('right')} className={`${styles.flexCenter} flex-1`}>
-					<img src="/whats-new.png" alt="whats new" className="w-[90%] h-[90%] object-contain" />
+					<img src="/public/whats-new.png" alt="whats new" className="w-[90%] h-[90%] object-contain" />
 				</motion.div>
 			</motion.div>
 		</section>
