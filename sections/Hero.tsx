@@ -6,13 +6,13 @@ import { slideIn, staggerContainer, textVariant } from '@/utils'
 
 export function Hero() {
 	return (
-		<section className={`${styles.yPaddings} h-[225px] sm:h-[277px] md:h-[357px] lg:h-[445px]`}>
+		<section className={`${styles.yPaddings}`}>
 			<motion.div
 				className={`${styles.innerWidth} mx-auto flex flex-col`}
 				variants={staggerContainer(0, 0)}
 				initial="hidden"
 				whileInView="show"
-				viewport={{ once: false, amount: 0.25 }}
+				viewport={{ once: true, amount: 0.25 }}
 			>
 				<div className="flex justify-center items-center flex-col relative">
 					<motion.h1
