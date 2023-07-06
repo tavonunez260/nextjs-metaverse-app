@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { footerVariants } from '@/utils'
 import styles from '@/styles'
 import { socials } from '@/constants'
+import moduleExports from '@/next.config'
 export function Footer() {
 	return (
 		<motion.footer
@@ -30,7 +31,12 @@ export function Footer() {
 						</p>
 						<div className="flex gap-4">
 							{socials.map(({ name, url }) => (
-								<img key={name} src={url} alt={name} className="w-[24px] h-[24px] object-contain cursor-pointer" />
+								<img
+									key={name}
+									src={`${moduleExports.assetPrefix || ''}${url}`}
+									alt={name}
+									className="w-[24px] h-[24px] object-contain cursor-pointer"
+								/>
 							))}
 						</div>
 					</div>

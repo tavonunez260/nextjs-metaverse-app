@@ -19,7 +19,11 @@ export function Navbar() {
 					src={`${moduleExports.assetPrefix || ''}/search.svg`}
 				/>
 				<h2 className="font-extrabold text-[24px] leading-[24px] text-white">METAVERSUS</h2>
-				<Image alt="menu" className="object-contain" height={24} src="/menu.svg" width={24} />
+				<img
+					alt="search"
+					className="w-[24px] h-[24px] object-contain"
+					src={`${moduleExports.assetPrefix || ''}/menu.svg`}
+				/>
 			</div>
 		</motion.nav>
 	)
